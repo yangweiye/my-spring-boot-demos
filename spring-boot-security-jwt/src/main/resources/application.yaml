@@ -1,0 +1,29 @@
+server:
+  port: 80
+
+spring:
+  security:
+    user:
+      name: yangweiye
+      password: 1998yang
+
+  datasource:
+    url: jdbc:mysql://152.136.145.182:3306/miaosha
+    username: yangweiye_admin
+    password: 1998yang
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  #这玩意不生效
+  mapper-locations: classpath:com/yangweiye/springbootdemos/mapper/*Mapper.xml
+  type-aliases-package: com.yangweiye.springbootdemos.pojo
+  type-handlers-package: com.yangweiye.springbootdemos.TypeHandler
+  configuration:
+    map-underscore-to-camel-case: true
+
+jwt:
+  header: Authorization
+  token-start-with: Bearer
+  base64-secret: zheshisecret
+  token-validity-in-seconds: 600
