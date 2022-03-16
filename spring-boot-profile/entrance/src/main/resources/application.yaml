@@ -1,0 +1,10 @@
+p1:
+    name: yangweiye
+    age: 23
+    gender: 1
+spring:
+    profiles:
+        active:
+         - test1
+         - test2
+         - test3
